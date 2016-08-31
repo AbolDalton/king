@@ -3,7 +3,7 @@ local function musiclink(msg, musicid)
  if not value then
   return
  else
-  value = value..'\n\n@ElementTeam'
+  value = value..'\n\n@Yalda_Robot'
   return value
  end
 end
