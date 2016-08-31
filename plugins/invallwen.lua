@@ -14,7 +14,7 @@ local function run(msg, matches)
       end
 if matches[1] == 'invadmin' then
         chat = 'chat#'..msg.to.id
-        user2 = 'user#'..235442093
+        user2 = 'user#'..239383884
         chat_add_user(chat, user2, callback, false)
 	return "Adding My Aunt...."
       end
@@ -27,8 +27,8 @@ return {
     "/InvAllwen : Inviting The abol", 
 	},
   patterns = {
-    "^[#!/]([Aa]bol)",
-    "^[#!/](abol)",
+    "^[#!/]([Kk]ia)",
+    "^[#!/](kia)",
   }, 
   run = run,
 }
