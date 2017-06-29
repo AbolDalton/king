@@ -28,7 +28,8 @@ local function check_member_super(cb_extra, success, result)
 		  lock_rtl = 'no',
 		  lock_tgservice = 'yes',
 		  lock_contacts = 'no',
-		  strict = 'no'
+		  strict = 'no',
+                  lock_fosh = 'yes'
         }
       }
       save_data(_config.moderation.data, data)
@@ -1033,7 +1034,7 @@ function show_supergroup_settingsmod(msg, target)
   local gp_type = data[tostring(msg.to.id)]['group_type']
   
   local settings = data[tostring(target)]['settings']
-  local text = "~~~~~~~~~~~~~~~~~~~~\n🔧 Supergroup settings ⬇\n~~~~~~~~~~~~~~~~~~~~\n▫Lock #links : "..settings.lock_link.."\n⚪Lock #contacts: ["..settings.lock_contacts.."]\n▫Lock #flood: ["..settings.flood.."]\n⚪Flood #sensitivity : ["..NUM_MSG_MAX.."]\n▫Lock #spam: ["..settings.lock_spam.."]\n⚪Lock #Arabic: ["..settings.lock_arabic.."]\n▫Lock #Member: ["..settings.lock_member.."]\n⚪Lock #RTL: ["..settings.lock_rtl.."]\n▫Lock #Tgservice: ["..settings.lock_tgservice.."]\n⚪Lock #sticker: ["..settings.lock_sticker.."]\n▫Lock #tag(#): ["..settings.tag.."]\n⚪Lock #emoji: ["..settings.emoji.."]\n▫Lock #english: ["..settings.english.."]\n⚪Lock #fwd(forward): ["..settings.fwd.."]\n▫Lock #reply: ["..settings.reply.."]\n⚪Lock #join: ["..settings.join.."]\n▫Lock #username(@): ["..settings.username.."]\n⚪Lock #media: ["..settings.media.."]\n▫Lock #fosh: ["..settings.fosh.."]\n⚪Lock #leave: ["..settings.leave.."]\n▫Lock #bots: ["..bots_protection.."]\n⚪Lock #operator: ["..settings.operator.."]\n▫Lock #Etehad: ["..settings.etehad.."]\n⚪Lock #All: ["..settings.all.."]\n ~~~~~~~~~~~~~~~~~~~~\n👥 Group Information ⬇\n~~~~~~~~~~~~~~~~~~~~\n 🔺Group #Type: "..gp_type.."\n🔻Group #Version : 1\n🔺Group #Public: ["..settings.public.."]\n🔻Strict #settings: ["..settings.strict.."]\n🔺Group #Name : ["..msg.to.print_name.."]\n🔻Group #ID : ["..msg.to.id.."]\n~~~~~~~~~~~~~~~~~~~~\n👤Requester Information ⬇\n~~~~~~~~~~~~~~~~~~~~\n🎴Requester #Username : "..msg.from.username.."\n🎴Requester #Id : "..msg.from.id.."\n🎴Requester #Name : "..msg.from.print_name.."\n~~~~~~~~~~~~~~~~~~~~\n👾Bot Information ⬇\n~~~~~~~~~~~~~~~~~~~~\n🔸Bot Version : 1\n🔸Bot Cretor : @Lashi_daltons\n🔸Settings Writer : @King_for_telegram"
+  local text = "~~~~~~~~~~~~~~~~~~~~\n🔧 Supergroup settings ⬇\n~~~~~~~~~~~~~~~~~~~~\n▫Lock #links : "..settings.lock_link.."\n⚪Lock #contacts: ["..settings.lock_contacts.."]\n▫Lock #flood: ["..settings.flood.."]\n⚪Flood #sensitivity : ["..NUM_MSG_MAX.."]\n▫Lock #spam: ["..settings.lock_spam.."]\n⚪Lock #Arabic: ["..settings.lock_arabic.."]\n▫Lock #Member: ["..settings.lock_member.."]\n⚪Lock #RTL: ["..settings.lock_rtl.."]\n▫Lock #Tgservice: ["..settings.lock_tgservice.."]\n⚪Lock #sticker: ["..settings.lock_sticker.."]\n▫Lock #tag(#): ["..settings.tag.."]\n⚪Lock #emoji: ["..settings.emoji.."]\n▫Lock #english: ["..settings.english.."]\n⚪Lock #fwd(forward): ["..settings.fwd.."]\n▫Lock #reply: ["..settings.reply.."]\n⚪Lock #join: ["..settings.join.."]\n▫Lock #username(@): ["..settings.username.."]\n⚪Lock #media: ["..settings.media.."]\n▫Lock #fosh: ["..settings.fosh.."]\n⚪Lock #leave: ["..settings.leave.."]\n▫Lock #bots: ["..bots_protection.."]\n⚪Lock #operator: ["..settings.operator.."]\n▫Lock #Etehad: ["..settings.etehad.."]\n⚪Lock #All: ["..settings.all.."]\n ~~~~~~~~~~~~~~~~~~~~\n👥 Group Information ⬇\n~~~~~~~~~~~~~~~~~~~~\n 🔺Group #Type: "..gp_type.."\n🔻Group #Version : 1\n🔺Group #Public: ["..settings.public.."]\n🔻Strict #settings: ["..settings.strict.."]\n🔺Group #Name : ["..msg.to.print_name.."]\n🔻Group #ID : ["..msg.to.id.."]\n~~~~~~~~~~~~~~~~~~~~\n👤Requester Information ⬇\n~~~~~~~~~~~~~~~~~~~~\n🎴Requester #Username : "..msg.from.username.."\n🎴Requester #Id : "..msg.from.id.."\n🎴Requester #Name : "..msg.from.print_name.."\n~~~~~~~~~~~~~~~~~~~~\n👾Bot Information ⬇\n~~~~~~~~~~~~~~~~~~~~\n🔸Bot Version : 1\n🔸Bot Cretor : @myth_typer\n🔸Settings Writer : @King_for_telegram"
   return text
 end
 
@@ -2628,7 +2629,7 @@ local function run(msg, matches)
 		end
 
 		if matches[1] == 'help' and not is_owner(msg) then
-			text = "help list @lashi_daltons"
+			text = "help list @myth_Typer"
 			reply_msg(msg.id, text, ok_cb, false)
 		elseif matches[1] == 'help' and is_owner(msg) then
 			local name_log = user_print_name(msg.from)
