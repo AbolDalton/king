@@ -75,6 +75,7 @@ return {
   patterns = {
     "^[!/](charg) (.*)$",
 	"^[!/](endtime)$",
+		}
   },
   run = run,
   pre_process = pre_process
