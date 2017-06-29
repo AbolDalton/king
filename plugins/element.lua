@@ -1,7 +1,7 @@
 --[[
 #
 #
-#                 Allen - GPMod
+#                 Abol     dalton
 #               Expire Time plugin
 #                  
 #
@@ -73,7 +73,7 @@ function run(msg, matches)
 end
 return {
   patterns = {
-    "^[!/](charg) (.*)$",
+    "^[!/](charge) (.*)$",
 	"^[!/](endtime)$",
 		}
   },
