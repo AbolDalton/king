@@ -1,12 +1,3 @@
---[[
-#
-#
-#                 Abol     dalton
-#               Expire Time plugin
-#                  
-#
-]]
-
 local function pre_process(msg)
 	local timetoexpire = 'unknown'
 	local expiretime = redis:hget ('expiretime', get_receiver(msg))
@@ -74,8 +65,7 @@ end
 return {
   patterns = {
     "^[!/](charge) (.*)$",
-	"^[!/](endtime)$",
-		
+	"^[!/]([endtime)$",
   },
   run = run,
   pre_process = pre_process
