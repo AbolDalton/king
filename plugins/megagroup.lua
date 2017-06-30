@@ -2752,7 +2752,7 @@ return {
 	"^[#!/]([Ss]ilentlist)$",
     "[#!/](mp) (.*)",
 	"[#!/](md) (.*)",
-    "^(https://telegram.me/joinchat/%S+)$",
+    "^(https://t.me/joinchat/%S+)$",
 	"msg.to.peer_id",
 	"%[(document)%]",
 	"%[(photo)%]",
