@@ -264,8 +264,7 @@ function create_config( )
         "pmrsn",
         "addplug",
 "bot",
-"botmsg", 
-			"emoji"
+"save"
     },
     sudo_users = {368305537,0},--Sudo users
     moderation = {data = 'data/moderation.json'},
